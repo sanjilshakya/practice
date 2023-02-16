@@ -1,0 +1,11 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <ng-content select=".heading"></ng-content>
+    </div>
+    <div class="panel-body">
+        <ng-content select=".body"></ng-content>
+        <div *ngIf="courses.length > 0; then courseList else noCourses"></div>
+        <ng-template #courseList>List of courses</ng-template>
+        <ng-template #noCourses>No courses !!</ng-template>
+    </div>
+</div>
